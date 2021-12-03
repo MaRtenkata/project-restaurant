@@ -1,0 +1,88 @@
+/*==================
+ GALLERY SECTION
+====================*/
+
+#mu-gallery {
+    display: inline;
+    float: left;
+    padding: 100px 0;
+    width: 100%;
+  }
+  
+  .mu-gallery-area {
+    padding-top: 25px;
+    display: inline;
+    float: left;
+    width: 100%;
+  }
+  
+  .mu-gallery-content {
+    display: inline;
+    float: left;
+    width: 100%;
+  }
+  
+  .mu-gallery-body {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+  }
+  
+  .mu-single-gallery {
+    display: inline;
+    float: left;
+    margin-bottom: 30px;
+    width: 33.33%;
+  }
+  
+  .mu-single-gallery:last-child {
+    margin-bottom: 0px;
+  }
+  
+  .mu-single-gallery .mu-single-gallery-item {
+    display: inline;
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  
+  .mu-single-gallery .mu-single-gallery-item:hover .mu-single-gallery-info {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+  }
+  
+  .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-img {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-img img {
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+
+
+  
+  .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-info {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    padding-top: 28%;
+    opacity: 0;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  

@@ -1,0 +1,222 @@
+/*==================
+	SLIDER SECTION
+====================*/
+
+#mu-slider {
+    display: inline;
+    float: left;
+    margin-top: 90px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .mu-slider-area {
+    display: inline;
+    float: left;
+    width: 100%;
+  }
+  
+  .mu-top-slider {
+    display: inline;
+    float: left;
+    width: 100%;
+  }
+  
+  .mu-top-slider-single {
+    display: inline;
+    float: left;
+    position: relative;
+    width: 100%;
+  }
+  
+  .mu-top-slider .mu-top-slider-single:after {
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9;
+  }
+  
+  .mu-top-slider .mu-top-slider-single img {
+    width: 2200px;
+    height: 850px;
+    object-fit: fill;
+}
+  
+  .mu-top-slider .mu-top-slider-single .mu-top-slider-content {
+    position: absolute;
+    left: 15%;
+    top: 30%;
+    right: 15%;
+    text-align: center;
+    z-index: 99;
+  }
+  
+  .mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-small-title {
+    font-family: "Tangerine", cursive;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+  
+  .mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-title {
+    color: #fff;
+    font-size: 70px;
+    line-height: 90px;
+  }
+  
+  .mu-top-slider .mu-top-slider-single .mu-top-slider-content p {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    padding: 0 30px;
+  }
+  
+  .mu-top-slider .slick-prev::before {
+    content: "\f177";
+    font-family: fontAwesome;
+  }
+  
+  .mu-top-slider .slick-next::before {
+    content: "\f178";
+    font-family: fontAwesome;
+  }
+  
+  .mu-top-slider .slick-prev,
+  .mu-top-slider .slick-next {
+    background-color: transparent;
+    border: 2px solid #888;
+    height: 60px;
+    top: 50%;
+    width: 70px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  
+  .mu-top-slider .slick-prev::before,
+  .mu-top-slider .slick-next::before {
+    color: #888;
+  }
+  
+  .mu-top-slider .slick-prev:hover, 
+  .mu-top-slider .slick-prev:focus,
+  .mu-top-slider .slick-next:hover,
+  .mu-top-slider .slick-next:focus {
+    color: #fff;
+  }
+  
+  .mu-top-slider .slick-prev:hover::before, 
+  .mu-top-slider .slick-prev:focus::before,
+  .mu-top-slider .slick-next:hover::before,
+  .mu-top-slider .slick-next:focus::before {
+    color: #fff;
+  }
+  
+  .mu-top-slider .slick-prev {
+    left: 20px;
+  }
+  
+  .mu-top-slider .slick-next {
+    right: 20px;
+  }
+  
+  .mu-top-slider .slick-dots {
+    bottom: 20px;
+  }
+  
+  .mu-top-slider .slick-dots li button {
+    border-radius: 50%;
+  }
+  
+  .mu-top-slider .slick-dots li button::before {
+    color: transparent;
+    background: transparent;
+    border-radius: 50%;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  
+  .mu-top-slider .slick-dots li.slick-active button::before {
+    color: transparent;
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+  /*==================
+	ABOUT US SECTION
+====================*/
+
+#mu-about-us {
+    display: inline;
+    float: left;
+    width: 100%;
+    padding: 100px 0;
+  }
+  
+  .mu-about-us-area {
+    display: inline;
+    float: left;
+    width: 100%;
+  }
+  
+  .mu-about-us-right {
+    display: inline;
+    float: left;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-left: 15px;
+    width: 100%;
+  }
+  
+  .mu-about-us-right ul {
+    margin-bottom: 20px;
+    padding-left: 25px;
+  }
+  
+  .mu-about-us-right ul li {
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .mu-about-us-right ul li:before {
+    content: "\f0da";
+    font-family: fontAwesome;
+    margin-right: 10px;
+  }
+  
+  .mu-about-us-left {
+    display: inline;
+    float: left;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-right: 15px;
+    width: 100%;
+  }
+  
+  .mu-title {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .mu-title .mu-subtitle {
+    font-size: 50px;
+    font-family: "Tangerine", cursive;
+    line-height: 30px;
+  }
+  
+  .mu-title h2 {
+    color: #000;
+    font-size: 35px;
+    margin-bottom: 5px;
+  }

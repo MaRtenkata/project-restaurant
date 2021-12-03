@@ -1,0 +1,51 @@
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 125px 0;
+    margin: auto;
+
+    font-family: "Open Sans", sans-serif;
+  }
+  
+
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-control input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .form-control input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    font-family: "Open Sans", sans-serif;
+  }
+
+ input[type="checkbox"] {
+  
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .form-login {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .btn-primary {
+    background-color: orange;
+  }
+  .btn-primary:hover {
+    background-color: rgba(247, 156, 0, 0.459);
+  }
+
+  .login-btn {
+    color: orange;
+  }
+  .login-btn:hover {
+    color: rgba(247, 156, 0, 0.459);
+  }
