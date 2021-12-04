@@ -1,22 +1,32 @@
 import { Link } from "react-router-dom";
+import MenuItem from "./MenuItem";
 
 
 function MenuDrinks(params) {
     return (
-        <li>
-            <div className="media">
-                <div className="media-left">
-                    <Link to="#">
-                        <img className="media-object" src="assets/img/menu/item-5.jpg" alt="img" />
-                    </Link>
-                </div>
-                <div className="media-body">
-                    <h4 className="media-heading"><Link to="#">Indian Breakfast</Link></h4>
-                    <span className="mu-menu-price">$15.85</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+        <div class="tab-pane fade" id="drinks">
+            <div class="mu-tab-content-area">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="mu-tab-content-left">
+                            <ul class="mu-menu-item-nav">
+                                <MenuItem />
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mu-tab-content-right">
+                            <ul class="mu-menu-item-nav">
+                                <MenuItem />
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </li>
+        </div>
     )
 }
 

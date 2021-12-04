@@ -1,19 +1,25 @@
+
 import { Link } from "react-router-dom";
 
 
-function MenuItem(params) {
+function MenuItem({dessert}) {
+
+
+
     return (
         <li>
             <div className="media">
                 <div className="media-left">
                     <Link to="#">
-                        <img className="media-object" src="assets/img/menu/item-5.jpg" alt="img" />
+                        <img className="media-object" src={dessert.img} alt="img" />
                     </Link>
                 </div>
                 <div className="media-body">
-                    <h4 className="media-heading"><Link to="#">Indian Breakfast</Link></h4>
-                    <span className="mu-menu-price">$15.85</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                    <h4 className="media-heading"><Link to="#">{dessert.name}</Link></h4>
+                    <span className="mu-menu-price">${dessert.price}</span>
+                    <p>
+                        
+                    </p>
                 </div>
             </div>
         </li>

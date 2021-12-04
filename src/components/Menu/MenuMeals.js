@@ -4,29 +4,31 @@ import MenuItem from "./MenuItem";
 
 function MenuMeals(params) {
     return (
-     
-        <div className="mu-tab-content-area">
-            <div className="row">
 
-                <div className="col-md-6">
-                    <div className="mu-tab-content-left">
-                        <ul className="mu-menu-item-nav">
-                          <MenuItem></MenuItem>
-                        </ul>
+        <div class="tab-pane fade" id="meals">
+            <div class="mu-tab-content-area">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="mu-tab-content-left">
+                            <ul class="mu-menu-item-nav">
+                                <MenuItem />
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
-                <div className="col-md-6">
-                    <div className="mu-tab-content-right">
-                        <ul className="mu-menu-item-nav">
-                        <MenuItem></MenuItem>
-                        </ul>
+                    <div class="col-md-6">
+                        <div class="mu-tab-content-right">
+                            <ul class="mu-menu-item-nav">
+                                <MenuItem />
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
-  
+
     )
 }
 
