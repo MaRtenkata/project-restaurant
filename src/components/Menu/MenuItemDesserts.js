@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 
-function MenuItem({dessert}) {
+function MenuItemDesserts({dessert}) {
 
 
 
@@ -26,4 +26,4 @@ function MenuItem({dessert}) {
     )
 }
 
-export default MenuItem;
+export default MenuItemDesserts;

@@ -5,15 +5,33 @@ import "../AddItem/AddItem.css";
 
 function AddItem(params) {
 
-    const nameRef = useRef();
-    const priceRef = useRef();
-    const descriptionRef = useRef();
+    
+
+
+
+    // const nameRef = useRef();
+    // const priceRef = useRef();
+    // const descriptionRef = useRef();
     const categoryRef = useRef();
-    const imgRef = useRef();
+    // const imgRef = useRef();
 
     function handleSubmit(e) {
         e.preventDefault();
-        addItem(nameRef.current.value, priceRef.current.value, descriptionRef.current.value, categoryRef.current, imgRef.current.value);
+
+        const formData = new FormData(e.target);
+
+        const nameRef = formData.get('name');
+        const priceRef = formData.get('price');
+        const descriptionRef = formData.get('description');
+        const imgRef = formData.get('img');
+    
+
+
+        console.log(nameRef);
+        
+
+
+         addItem(nameRef, priceRef, descriptionRef, categoryRef.current, imgRef);
     }
    
     
@@ -35,21 +53,21 @@ function AddItem(params) {
 
                                 <div className="col-md-6">
                                     <div className="mu-reservation-left">
-                                        <form className="mu-reservation-form"  onSubmit={handleSubmit}>
+                                        <form className="mu-reservation-form" name="myForm"  onSubmit={handleSubmit}>
                                             <div className="row">
                                                 <div className="col-md-12">
                                                     <div className="form-group">
-                                                        <input type="text" className="form-control" placeholder="Name" ref={nameRef}/>
+                                                        <input type="text" className="form-control" placeholder="Name" name="name"/>
                                                     </div>
                                                 </div>
                                                 <div className="col-md-12">
                                                     <div className="form-group">
-                                                        <input type="number" className="form-control" placeholder="Price" ref={priceRef}/>
+                                                        <input type="number" className="form-control" placeholder="Price" name="price"/>
                                                     </div>
                                                 </div>
                                                 <div className="col-md-12">
                                                     <div className="form-group">
-                                                        <input type="text" className="form-control" placeholder="Description" ref={descriptionRef}/>
+                                                        <input type="text" className="form-control" placeholder="Description" name="description"/>
                                                     </div>
                                                 </div>
                                                 <div className="col-md-12">
@@ -67,7 +85,7 @@ function AddItem(params) {
                                                 <div className="col-md-12">
                                                     <div className="form-group">
 
-                                                        <input type="file" placeholder="Image" ref={imgRef} />
+                                                        <input type="text" placeholder="Image" name="img" />
                                                     </div>
                                                 </div>
                                                 <button type="submit" className="mu-readmore-btn">Create and Item</button>

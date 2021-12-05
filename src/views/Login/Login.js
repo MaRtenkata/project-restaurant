@@ -1,12 +1,14 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import "../Login/Login.css";
 
 function Login() {
 
-    const emailRef = useRef();
-    const passwordRef = useRef();
+    
+
+    const [emailRef, setEmail] = useState('');
+    const [passwordRef, setPassword] = useState('');
     const { login, currentUser} = useAuth();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
@@ -20,7 +22,7 @@ function Login() {
 
         try {
             setError('')
-            await login(emailRef.current.value, passwordRef.current.value)
+            await login(emailRef, passwordRef)
             navigate('/');
             setLoading(true)
           
@@ -46,12 +48,12 @@ function Login() {
 
             <div className="form-floating">
                 <label htmlFor="floatingInput">Email address</label>
-                <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" ref={emailRef} required/>
+                <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" onChange={(e) => setEmail(e.target.value)}  required/>
 
             </div>
             <div className="form-floating">
                 <label htmlFor="floatingPassword">Password</label>
-                <input type="password" className="form-control" id="floatingPassword" placeholder="Password" ref={passwordRef} required/>
+                <input type="password" className="form-control" id="floatingPassword" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required/>
 
             </div>
             <button className="w-100 btn btn-lg btn-primary" type="submit" disabled={loading}>Sign in</button>

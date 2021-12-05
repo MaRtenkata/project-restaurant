@@ -2,6 +2,9 @@ import "../Menu/Menu.css";
 
 
 import MenuDesserts from "../../components/Menu/MenuDesserts";
+import MenuMeals from "../../components/Menu/MenuMeals";
+import MenuSnacks from "../../components/Menu/MenuSnacks";
+// import MenuDrinks from "../../components/Menu/MenuDrinks";
 
 
 function Menu(params) {
@@ -35,7 +38,7 @@ function Menu(params) {
                         <div className="col-md-6">
                           <div className="mu-tab-content-left">
                             <ul className="mu-menu-item-nav">
-                              
+
                             </ul>
                           </div>
                         </div>
@@ -43,7 +46,7 @@ function Menu(params) {
                         <div className="col-md-6">
                           <div className="mu-tab-content-right">
                             <ul className="mu-menu-item-nav">
-                              
+
                             </ul>
                           </div>
                         </div>
@@ -52,11 +55,15 @@ function Menu(params) {
                     </div>
                   </div>
 
-               
+                  <MenuMeals />
+
+                  <MenuSnacks />
 
                   <MenuDesserts />
 
-                 
+                  {/* <MenuDrinks /> */}
+
+
                 </div>
               </div>
             </div>
