@@ -1,26 +1,28 @@
+
 import { getDocs } from "firebase/firestore";
-import { useEffect } from "react";
 import { collection, query, where, } from "firebase/firestore";
-import { db } from '../../services/firebase.config';
-
+import { db } from '../../../services/firebase.config';
 import { useState } from "react/cjs/react.development";
+import { useEffect } from "react";
 
 
-function MenuDrinks(params) {
+function MenuMeals(params) {
 
-    const [drinks, setDrinks] = useState([]);
+
+
+    const [meals, setMeals] = useState([]);
 
 
     async function fetchData() {
         try {
 
-            const q = query(collection(db, "menu"), where("category", "==", "Drinks"));
+            const q = query(collection(db, "menu"), where("category", "==", "Meals"));
             const querySnapshot = await getDocs(q);
 
             querySnapshot.forEach(element => {
                 var data = element.data();
 
-                setDrinks(arr => [...arr, data]);
+                setMeals(arr => [...arr, data]);
                 
 
             });
@@ -30,20 +32,22 @@ function MenuDrinks(params) {
         }
     }
 
+
     useEffect(() => {
         fetchData();
+       
     }, [])
 
-
     return (
-        <div class="tab-pane fade" id="drinks">
+
+        <div class="tab-pane fade" id="meals">
             <div class="mu-tab-content-area">
                 <div class="row">
 
                     <div class="col-md-6">
                         <div class="mu-tab-content-left">
                             <ul class="mu-menu-item-nav">
-                            {drinks.map(item => console.log(item))}
+                            {meals.map( item => console.log(item))}
                             </ul>
                         </div>
                     </div>
@@ -59,7 +63,8 @@ function MenuDrinks(params) {
                 </div>
             </div>
         </div>
+
     )
 }
 
-export default MenuDrinks;
+export default MenuMeals;

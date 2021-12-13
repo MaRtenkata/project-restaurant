@@ -2,7 +2,7 @@
 
 import { getDocs } from "firebase/firestore";
 import { collection, query, where, } from "firebase/firestore";
-import { db } from '../../services/firebase.config';
+import { db } from '../../../services/firebase.config';
 import { useState } from "react/cjs/react.development";
 import { useEffect } from "react";
 import MenuItemSnacks from "./MenuItemSnack";

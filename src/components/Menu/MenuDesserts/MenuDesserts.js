@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getDocs } from "firebase/firestore";
 import { collection, query, where, } from "firebase/firestore";
-import { db } from '../../services/firebase.config';
+import { db } from '../../../services/firebase.config';
 
 
 
