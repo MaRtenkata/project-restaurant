@@ -1,16 +1,19 @@
+
 import firebase from "firebase/compat/app"
 import "firebase/compat/firestore"
 import 'firebase/compat/auth';
-import  firbaseConf from "../env.js";
+
+// require('dotenv').config()
+
 
 const firebaseConfig = {
 
-    apiKey: firbaseConf.FIREBASE_API_KEY,
-    authDomain:  firbaseConf.FIREBASE_AUTHDOMAIN,
-    projectId: firbaseConf.FIREBASE_PROJECT_ID,
-    storageBucket:  firbaseConf.FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: firbaseConf.FIREBASE_MESSAGING_SENDER_ID,
-    appId:  firbaseConf.FIREBASE_APP_ID,
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain:  process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID ,
+    storageBucket:  process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId:  process.env.REACT_APP_ID,
 
 };
 

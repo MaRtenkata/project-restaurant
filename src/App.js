@@ -10,6 +10,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer"
 import AddItem from "./views/AddItem/AddItem";
 
+require('dotenv').config()
+
 
 
 function App() {
