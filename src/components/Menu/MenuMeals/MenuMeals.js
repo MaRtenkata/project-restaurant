@@ -4,6 +4,7 @@ import { collection, query, where, } from "firebase/firestore";
 import { db } from '../../../services/firebase.config';
 import { useState } from "react/cjs/react.development";
 import { useEffect } from "react";
+import MenuItemMeals from "./MenuItemMeals";
 
 
 function MenuMeals(params) {
@@ -47,7 +48,7 @@ function MenuMeals(params) {
                     <div class="col-md-6">
                         <div class="mu-tab-content-left">
                             <ul class="mu-menu-item-nav">
-                            {meals.map( item => console.log(item))}
+                            {meals.map( meal => <MenuItemMeals key = {meal.itemId} meal = {meal}/>)}
                             </ul>
                         </div>
                     </div>

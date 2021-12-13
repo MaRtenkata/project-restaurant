@@ -7,6 +7,7 @@ import { db } from '../../../services/firebase.config';
 
 
 import MenuItemDesserts from "./MenuItemDesserts";
+import { halfFirst, halfsSecond } from "../../../services/util";
 
 
 
@@ -16,6 +17,7 @@ function MenuDesserts() {
 
 
     const [desserts, setDesserts] = useState([]);
+    
 
 
     
@@ -31,11 +33,13 @@ function MenuDesserts() {
                 var data = element.data();
 
                 setDesserts(arr => [...arr, data]);
+
+                
                 
 
             });
 
-
+        
 
 
 
@@ -47,7 +51,7 @@ function MenuDesserts() {
 
     useEffect(() => {
         fetchData();
-    }, [])
+    },[])
 
 
 
@@ -60,7 +64,7 @@ function MenuDesserts() {
                     <div className="col-md-6">
                         <div className="mu-tab-content-left">
                             <ul className="mu-menu-item-nav">
-                                {desserts.map(dessert => <MenuItemDesserts key={dessert.itemId} dessert={dessert} />)}
+                                {halfFirst(desserts).map(dessert => <MenuItemDesserts key={dessert.itemId} dessert={dessert} />)}
                             </ul>
                         </div>
                     </div>
@@ -68,7 +72,7 @@ function MenuDesserts() {
                     <div className="col-md-6">
                         <div className="mu-tab-content-right">
                             <ul className="mu-menu-item-nav">
-                                {/* {desserts.map(dessert => <MenuItem key={dessert.itemId} dessert={dessert} />)} */}
+                                {halfsSecond(desserts).map(dessert => <MenuItemDesserts key={dessert.itemId} dessert={dessert} />)} 
                             </ul>
                         </div>
                     </div>

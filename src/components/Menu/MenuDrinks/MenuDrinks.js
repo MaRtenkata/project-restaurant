@@ -4,11 +4,14 @@ import { collection, query, where, } from "firebase/firestore";
 import { db } from '../../../services/firebase.config';
 
 import { useState } from "react/cjs/react.development";
+import MenuItemDrinks from "./MenuItemDrinks";
+import { halfFirst, halfsSecond } from "../../../services/util";
 
 
 function MenuDrinks(params) {
 
     const [drinks, setDrinks] = useState([]);
+    
 
 
     async function fetchData() {
@@ -21,6 +24,8 @@ function MenuDrinks(params) {
                 var data = element.data();
 
                 setDrinks(arr => [...arr, data]);
+
+               
                 
 
             });
@@ -29,6 +34,9 @@ function MenuDrinks(params) {
             console.log(error);
         }
     }
+
+
+  
 
     useEffect(() => {
         fetchData();
@@ -43,7 +51,7 @@ function MenuDrinks(params) {
                     <div class="col-md-6">
                         <div class="mu-tab-content-left">
                             <ul class="mu-menu-item-nav">
-                            {drinks.map(item => console.log(item))}
+                            {halfFirst(drinks).map(drinks => <MenuItemDrinks key={drinks.itemId} drinks={drinks} />)}
                             </ul>
                         </div>
                     </div>
@@ -51,7 +59,7 @@ function MenuDrinks(params) {
                     <div class="col-md-6">
                         <div class="mu-tab-content-right">
                             <ul class="mu-menu-item-nav">
-                               
+                               {halfsSecond(drinks).map(drinks => <MenuItemDrinks key={drinks.itemId} drinks={drinks} />)}
                             </ul>
                         </div>
                     </div>

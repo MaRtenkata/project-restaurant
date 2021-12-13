@@ -4,7 +4,8 @@ import "../Menu/Menu.css";
 import MenuDesserts from "../../components/Menu/MenuDesserts/MenuDesserts";
 import MenuMeals from "../../components/Menu/MenuMeals/MenuMeals";
 import MenuSnacks from "../../components/Menu/MenuSnacks/MenuSnacks";
-// import MenuDrinks from "../../components/Menu/MenuDrinks";
+import MenuDrinks from "../../components/Menu/MenuDrinks/MenuDrinks";
+
 
 
 function Menu(params) {
@@ -61,7 +62,7 @@ function Menu(params) {
 
                   <MenuDesserts />
 
-                  {/* <MenuDrinks /> */}
+                  <MenuDrinks />
 
 
                 </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import "../Login/Login.css";
@@ -33,6 +33,15 @@ function Login() {
 
 
     }
+
+
+    useEffect(()=> {
+        return () => {
+            setEmail("");
+            setPassword("");
+            
+        };
+    }, [])
 
     return (
      
