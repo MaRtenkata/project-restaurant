@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function halfFirst(arr) {
     let half = Math.ceil(arr.length / 2);
 
@@ -15,10 +17,12 @@ export function halfsSecond(arr) {
 
 export function checkAdmin(currentUser) {
     if (currentUser) {
-      if (currentUser.email === 'martin.shindarski@outlook.com') {
-        return true
-      } else if (currentUser.email === null) {
+      if (currentUser.email !== 'martin.shindarski@outlook.com') {
         return false
+      } else {
+        return true
       }
     }
 }
+
+

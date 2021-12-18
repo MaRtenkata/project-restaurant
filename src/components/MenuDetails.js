@@ -6,7 +6,7 @@ import { collection, query, where, } from "firebase/firestore";
 import { db } from "../services/firebase.config";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { checkAdmin } from "../services/util";
+import { checkAdmin} from "../services/util";
 
 
 
@@ -46,6 +46,18 @@ function MenuDetails(props) {
         }
     }
 
+    function checkUser(currentUser) {
+        if(currentUser){
+            if(checkAdmin(currentUser)){
+                return (<p> <Link to="#" className="btn btn-danger" role="button">Delete</Link> <Link to="#" className="btn btn-info" role="button">Edit</Link> </p>)
+            }else{
+                return (<p><Link to="#" className="btn btn-primary" role="button">Add to cart</Link></p>);
+            }
+        }else{
+            return 
+        }
+    }
+
     useEffect(() => {
 
         getOne(params.itemId)
@@ -72,8 +84,7 @@ function MenuDetails(props) {
                                                 <h3>{item.name}</h3>
                                                 <p>Item price is: ${item.price}</p>
                                                 <p>Description: {item.description}</p>
-                                                {checkAdmin(currentUser) ?  <p><Link to="#" className="btn btn-alert" role="button">Delete</Link></p> 
-                                                : <p><Link to="#" className="btn btn-primary" role="button">Add to cart</Link></p>}
+                                                {checkUser(currentUser)}
                                                 
                                             </div>
                                         </div>
