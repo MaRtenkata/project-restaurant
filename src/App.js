@@ -9,6 +9,8 @@ import Reservation from "./views/Reservation/Reservation";
 import Header from "./components/Header";
 import Footer from "./components/Footer"
 import AddItem from "./views/AddItem/AddItem";
+import ErrorPage from "./views/ErrorPage/ErrorPage";
+import MenuDetails from "./components/MenuDetails";
 
 require('dotenv').config()
 
@@ -26,9 +28,11 @@ function App() {
           <Route path="/reservation" element={<Reservation />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/menu" element={<Menu />} />
+          <Route path="menu/:itemId" element={<MenuDetails/>} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/add-item" element={<AddItem />} />
+          <Route path="*" element={<ErrorPage/>}/>
         </Routes>
       </main>
 

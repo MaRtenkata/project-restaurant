@@ -9,12 +9,12 @@ function MenuItemMeals({meal}) {
         <li>
             <div className="media">
                 <div className="media-left">
-                    <Link to="#">
+                    <Link to={`/menu/${meal.itemId}`}>
                         <img className="media-object" src={meal.img} alt="img" />
                     </Link>
                 </div>
                 <div className="media-body">
-                    <h4 className="media-heading"><Link to="#">{meal.name}</Link></h4>
+                    <h4 className="media-heading"><Link to={`/menu/${meal.itemId}`}>{meal.name}</Link></h4>
                     <span className="mu-menu-price">${meal.price}</span>
                     <p>
                         

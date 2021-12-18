@@ -305,86 +305,7 @@ img {
 
 
 
-/*==================
- COUNTER SECTION
-====================*/
 
-#mu-counter {
-  background-attachment: fixed;
-  background-image: url("assets/img/counter-bg.jpeg");
-  background-size: cover;
-  display: inline;
-  float: left;
-  width: 100%;
-}
-
-.mu-counter-overlay {
-  background-color: rgba(0, 0, 0, 0.8);
-  display: inline;
-  padding: 100px 0;
-  float: left;
-  width: 100%;
-}
-
-.mu-counter-area {
-  display: inline;
-  float: left;
-  width: 100%;
-}
-
-.mu-counter-nav {
-  display: inline-block;
-  width: 100%;
-}
-
-.mu-counter-nav li {
-  display: inline-block;
-}
-
-.mu-counter-nav li:last-child {
-  border-right: none;
-}
-
-.mu-counter-nav li .mu-single-counter {
-  color: #fff;
-  display: inline;
-  float: left;
-  padding: 25px 0;
-  text-align: center;
-  width: 100%;
-}
-
-.mu-counter-nav li .mu-single-counter span {
-  font-family: "Tangerine", cursive;
-  font-size: 40px;
-}
-
-.mu-counter-nav li .mu-single-counter h3 {
-  font-size: 50px;
-  font-weight: bold;
-  line-height: 40px;
-  margin-bottom: 15px;
-  margin-top: 10px;
-}
-
-.mu-counter-nav li .mu-single-counter h3 span {
-  font-family: "Open Sans", sans-serif;
-  font-size: 35px;
-  font-weight: bold;
-  line-height: 40px;
-}
-
-.mu-counter-nav li .mu-single-counter h3 sup {
-  font-weight: normal;
-  display: inline-block;
-  font-size: 35px;
-}
-
-.mu-counter-nav li .mu-single-counter p {
-  font-size: 18px;
-  letter-spacing: 1.5px;
-  margin-bottom: 0;
-}
 
 
 /*==================
@@ -464,6 +385,9 @@ img {
 .mu-footer-copyright p a {
   color: #fff;
 }
+
+
+
 
 
 /*==================

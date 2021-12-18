@@ -5,6 +5,8 @@ import MenuDesserts from "../../components/Menu/MenuDesserts/MenuDesserts";
 import MenuMeals from "../../components/Menu/MenuMeals/MenuMeals";
 import MenuSnacks from "../../components/Menu/MenuSnacks/MenuSnacks";
 import MenuDrinks from "../../components/Menu/MenuDrinks/MenuDrinks";
+import MenuBreakfast from "../../components/Menu/MenuBreakfast/MenuBreakfast";
+
 
 
 
@@ -32,29 +34,7 @@ function Menu(params) {
 
 
                 <div className="tab-content">
-                  <div className="tab-pane fade in active" id="breakfast">
-                    <div className="mu-tab-content-area">
-                      <div className="row">
-
-                        <div className="col-md-6">
-                          <div className="mu-tab-content-left">
-                            <ul className="mu-menu-item-nav">
-
-                            </ul>
-                          </div>
-                        </div>
-
-                        <div className="col-md-6">
-                          <div className="mu-tab-content-right">
-                            <ul className="mu-menu-item-nav">
-
-                            </ul>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
+                  <MenuBreakfast/>
 
                   <MenuMeals />
 

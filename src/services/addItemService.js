@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 
+
 export function addItem(name, price, description, category, img) {
     try {
         db.collection('menu').add({
@@ -21,4 +22,7 @@ export function addItem(name, price, description, category, img) {
     }
  
 }
+
+
+
 

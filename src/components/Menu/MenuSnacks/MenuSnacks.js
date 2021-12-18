@@ -6,6 +6,7 @@ import { db } from '../../../services/firebase.config';
 import { useState } from "react/cjs/react.development";
 import { useEffect } from "react";
 import MenuItemSnacks from "./MenuItemSnack";
+import { halfFirst, halfsSecond } from "../../../services/util";
 
 
 function MenuSnacks(params) {
@@ -23,7 +24,7 @@ function MenuSnacks(params) {
                 var data = element.data();
 
                 setSnacks(arr => [...arr, data]);
-                
+
 
             });
 
@@ -45,7 +46,7 @@ function MenuSnacks(params) {
                     <div class="col-md-6">
                         <div class="mu-tab-content-left">
                             <ul class="mu-menu-item-nav">
-                            {snacks.map(snack => <MenuItemSnacks key={snack.itemId} snack={snack} />)}
+                                {halfFirst(snacks).map(snack => <MenuItemSnacks key={snack.itemId} snack={snack} />)}
                             </ul>
                         </div>
                     </div>
@@ -53,7 +54,7 @@ function MenuSnacks(params) {
                     <div class="col-md-6">
                         <div class="mu-tab-content-right">
                             <ul class="mu-menu-item-nav">
-                                
+                                {halfsSecond(snacks).map(snack => <MenuItemSnacks key={snack.itemId} snack={snack} />)}
                             </ul>
                         </div>
                     </div>
