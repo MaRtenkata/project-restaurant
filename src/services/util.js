@@ -1,4 +1,10 @@
-import { Link } from "react-router-dom";
+
+
+
+
+
+
+
 
 export function halfFirst(arr) {
     let half = Math.ceil(arr.length / 2);
@@ -10,7 +16,7 @@ export function halfFirst(arr) {
 export function halfsSecond(arr) {
     let half = Math.ceil(arr.length / 2);
 
-    let secondHalf = arr.slice(-half);
+    let secondHalf = arr.slice(half, arr.length);
     return secondHalf
 }
 
@@ -24,5 +30,10 @@ export function checkAdmin(currentUser) {
       }
     }
 }
+
+
+
+
+
 
 

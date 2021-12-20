@@ -44,21 +44,21 @@ function MenuDrinks(params) {
 
 
     return (
-        <div class="tab-pane fade" id="drinks">
-            <div class="mu-tab-content-area">
-                <div class="row">
+        <div className="tab-pane fade" id="drinks">
+            <div className="mu-tab-content-area">
+                <div className="row">
 
-                    <div class="col-md-6">
-                        <div class="mu-tab-content-left">
-                            <ul class="mu-menu-item-nav">
+                    <div className="col-md-6">
+                        <div className="mu-tab-content-left">
+                            <ul className="mu-menu-item-nav">
                             {halfFirst(drinks).map(drinks => <MenuItemDrinks key={drinks.itemId} drinks={drinks} />)}
                             </ul>
                         </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="mu-tab-content-right">
-                            <ul class="mu-menu-item-nav">
+                    <div className="col-md-6">
+                        <div className="mu-tab-content-right">
+                            <ul className="mu-menu-item-nav">
                                {halfsSecond(drinks).map(drinks => <MenuItemDrinks key={drinks.itemId} drinks={drinks} />)}
                             </ul>
                         </div>

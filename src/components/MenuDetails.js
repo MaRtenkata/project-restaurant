@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useParams } from "react-router"
+import {  useParams } from "react-router"
 import { useState } from "react/cjs/react.development";
 import { getDocs } from "firebase/firestore";
 import { collection, query, where, } from "firebase/firestore";
@@ -7,9 +7,6 @@ import { db } from "../services/firebase.config";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { checkAdmin} from "../services/util";
-
-
-
 
 
 
@@ -46,10 +43,27 @@ function MenuDetails(props) {
         }
     }
 
+
+    function deleteItem(id) {
+
+        let item = db.collection('menu').where("itemId", "==", `${id}`);
+        item.get().then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+                doc.ref.delete()
+            })
+        })
+        console.log("Item deleted");
+      }
+
+   
+
+
+    
+
     function checkUser(currentUser) {
         if(currentUser){
             if(checkAdmin(currentUser)){
-                return (<p> <Link to="#" className="btn btn-danger" role="button">Delete</Link> <Link to="#" className="btn btn-info" role="button">Edit</Link> </p>)
+                return (<p> <Link to="/" className="btn btn-danger" role="button" onClick={() => { deleteItem(params.itemId)} }>Delete</Link> <Link to={`/edit/${params.itemId}`} className="btn btn-info" role="button">Edit</Link> </p>)
             }else{
                 return (<p><Link to="#" className="btn btn-primary" role="button">Add to cart</Link></p>);
             }

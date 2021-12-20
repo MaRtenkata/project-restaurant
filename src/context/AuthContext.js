@@ -24,6 +24,7 @@ export function AuthProvider({ children }) {
             name,
             authProvider: "local",
             email,
+            cart: []
           });
         return  res;
     }
