@@ -11,10 +11,19 @@ RESERVATION SECTION
   }
   
   .mu-reservation-area {
-    display: inline;
+    display: flex;
+    flex-direction: column;
     float: left;
     padding-top: 25px;
     width: 100%;
+  }
+
+
+  .mu-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
   }
   
   .mu-reservation-area .mu-title h2 {

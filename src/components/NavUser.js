@@ -46,8 +46,9 @@ function NavUser() {
                 <li><Link to="/gallery">GALLERY</Link></li>
                 <li><Link to="/reservation">RESERVATION</Link></li>
                 <li><Link to="/cart">CART</Link></li>
+                <li className='welcome'>Welcome {currentUser.email} <button onClick={handleLogout}>Logout</button></li>
 
-                {currentUser ? <li className='welcome'>Welcome {currentUser.email} <button onClick={handleLogout}>Logout</button></li>  :   <li className="user"><Link to="/register">REGISTER</Link></li>}
+              
               
               </ul>
             </div>

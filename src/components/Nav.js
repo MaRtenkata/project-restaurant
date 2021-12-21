@@ -1,32 +1,13 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+
+import { Link} from "react-router-dom";
 
 
 function Nav() {
-
-    const [error, setError] = useState('');
-    const {currentUser, logout} = useAuth();
-    let navigate = useNavigate();
-  
-  
-    async function handleLogout() {
-      setError('');
-  
-      try {
-        await logout();
-        navigate('/')
-      } catch  {
-          setError('Failed to log out!')
-      }
-  
-    }
 
     return (
         <nav className="navbar navbar-default mu-main-navbar" role="navigation">
           <div className="container">
             <div className="navbar-header">
-              {error}
               <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span className="sr-only">Toggle navigation</span>
                 <span className="icon-bar"></span>
@@ -46,7 +27,7 @@ function Nav() {
                 <li><Link to="/gallery">GALLERY</Link></li>
                 <li><Link to="/reservation">RESERVATION</Link></li>
 
-                {currentUser ? <li className='welcome'>Welcome {currentUser.email} <button onClick={handleLogout}>Logout</button></li>  :   <li className="user"><Link to="/register">REGISTER</Link></li>}
+                 <li className="user"><Link to="/register">REGISTER</Link></li>
               
               </ul>
             </div>

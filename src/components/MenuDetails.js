@@ -84,14 +84,12 @@ function MenuDetails(props) {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="mu-reservation-area">
-
                             <div className="mu-title">
                                 <span className="mu-subtitle">Menu</span>
                                 <h2>Details</h2>
                             </div>
                             <div className="mu-details">
-                                <div className="row">
-                                    <div className="col-sm-6 col-md-4">
+                                    <div className="col-sm-6 col-md-4 mu-details-box" >
                                         <div className="thumbnail">
                                             <img src={item.img} alt="..." />
                                             <div className="caption">
@@ -99,10 +97,8 @@ function MenuDetails(props) {
                                                 <p>Item price is: ${item.price}</p>
                                                 <p>Description: {item.description}</p>
                                                 {checkUser(currentUser)}
-                                                
                                             </div>
                                         </div>
-                                    </div>
                                 </div>
 
                             </div>
