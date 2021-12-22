@@ -15,13 +15,13 @@ export function AuthProvider({ children }) {
     const [loading, setLoading] = useState(true);
 
 
-    async function signUp(username, email, password) {
+    async function signUp(name, email, password) {
 
         const res = await auth.createUserWithEmailAndPassword(email, password);
         const user =  res.user
         db.collection("users").add({
             uid: user.uid,
-            username,
+            name,
             authProvider: "local",
             email,
             cart: []

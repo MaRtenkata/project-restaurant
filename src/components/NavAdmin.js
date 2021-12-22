@@ -46,7 +46,8 @@ function NavAdmin() {
                 <li><Link to="/gallery">GALLERY</Link></li>
                 <li><Link to="/add-item">ADD ITEM</Link></li>  
                 {/* <li><Link to="/add-img">ADD IMG</Link></li> */}
-                <li className='welcome'>Welcome {currentUser.email} <button onClick={handleLogout}>Logout</button></li>
+
+                <li className='welcome'>WELCOME {currentUser.email} <button onClick={handleLogout}>Logout</button></li>
               </ul>
             </div>
           </div>

@@ -8,6 +8,10 @@ function NavUser() {
     const [error, setError] = useState('');
     const {currentUser, logout} = useAuth();
     let navigate = useNavigate();
+
+
+
+
   
   
     async function handleLogout() {
@@ -46,7 +50,7 @@ function NavUser() {
                 <li><Link to="/gallery">GALLERY</Link></li>
                 <li><Link to="/reservation">RESERVATION</Link></li>
                 <li><Link to="/cart">CART</Link></li>
-                <li className='welcome'>Welcome {currentUser.email} <button onClick={handleLogout}>Logout</button></li>
+                <li className='welcome'>WELCOME {currentUser.email} <button onClick={handleLogout}>Logout</button></li>
 
               
               
