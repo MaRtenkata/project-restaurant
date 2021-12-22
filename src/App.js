@@ -12,6 +12,7 @@ import AddItem from "./views/AddItem/AddItem";
 import ErrorPage from "./views/ErrorPage/ErrorPage";
 import MenuDetails from "./components/MenuDetails";
 import EditItem from "./views/EditItem/EditItem";
+import Reservations from "./views/Reservations/Reservetions";
 
 require('dotenv').config()
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/add-item" element={<AddItem />} />
+          <Route path="/reserve" element={< Reservations />} />
           <Route path="*" element={<ErrorPage/>}/>
         </Routes>
       </main>

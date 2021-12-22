@@ -1,6 +1,12 @@
+import { useRef } from "react";
+import { useNavigate } from "react-router";
+import { reserve } from "../../services/addItemService";
 import "../Reservation/Reservation.css";
 
 function Reservation(params) {
+
+    const peopleRef = useRef();
+    let navigate = useNavigate();
 
 
     function handleSubmit(e) {
@@ -9,9 +15,11 @@ function Reservation(params) {
         const formData = new FormData(e.target);
 
         const nameRef = formData.get('name');
-        const priceRef = formData.get('price');
-        const descriptionRef = formData.get('description');
-        const imgRef = formData.get('img');
+        const emailRef = formData.get('email');
+        const numberRef = formData.get('number');
+        const dateRef = formData.get('date');
+        const textRef = formData.get('freeText');
+
 
 
 
@@ -19,8 +27,8 @@ function Reservation(params) {
 
 
 
-        reserve(nameRef, priceRef, descriptionRef, peopleRef.current, imgRef);
-        navigate("/menu");
+        reserve(nameRef, emailRef, numberRef, peopleRef.current, dateRef,textRef );
+        navigate("/");
     }
 
 
@@ -52,12 +60,12 @@ function Reservation(params) {
                                                 </div>
                                                 <div className="col-md-12">
                                                     <div className="form-group">
-                                                        <input type="email" className="form-control" placeholder="Email" />
+                                                        <input type="email" className="form-control" placeholder="Email" name="email" required/>
                                                     </div>
                                                 </div>
                                                 <div className="col-md-12">
                                                     <div className="form-group">
-                                                        <input type="text" className="form-control" placeholder="Phone Number" />
+                                                        <input type="text" className="form-control" placeholder="Phone Number" name="number" required/>
                                                     </div>
                                                 </div>
                                                 <div className="col-md-12">
@@ -79,12 +87,12 @@ function Reservation(params) {
                                                 </div>
                                                 <div className="col-md-12">
                                                     <div className="form-group">
-                                                        <input type="text" className="form-control" id="datepicker" placeholder="Date" />
+                                                        <input type="text" className="form-control" id="datepicker" placeholder="Date" name="date" required/>
                                                     </div>
                                                 </div>
                                                 <div className="col-md-12">
                                                     <div className="form-group">
-                                                        <textarea className="form-control" cols="30" rows="10" placeholder="Your Message"></textarea>
+                                                        <textarea className="form-control" cols="30" rows="10" placeholder="Your Message" name="freeText"></textarea>
                                                     </div>
                                                 </div>
                                                 <button type="submit" className="mu-readmore-btn">Make Reservation</button>

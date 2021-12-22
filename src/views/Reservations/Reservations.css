@@ -1,0 +1,26 @@
+
+
+.mu-reservations-item-box {
+    display: flex;
+    width: 60%;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.mu-reservations-item-box-content {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.li-reserve{
+    margin-top: 10px;
+}
+
+.btn-reserve{
+    margin-top: 10px;
+}
+
+.mu-reservations-item-box-buttons{
+    margin-left: 10px;
+}

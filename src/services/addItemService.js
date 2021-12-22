@@ -26,6 +26,25 @@ export function addItem(name, price, description, category, img) {
 }
 
 
+export function reserve(name, email, phoneNumber, people, date, text) {
+    try {
+        db.collection('reservations').add({
+            resId: uuidv4(),
+            name,
+            email,
+            phoneNumber,
+            people,
+            date,
+            text
+        });
+        alert("Reserved a table");
+    } catch (error) {
+        console.error(error);
+        alert("An error occured while fetching user data");
+    }
+}
+
+
 
 
 
