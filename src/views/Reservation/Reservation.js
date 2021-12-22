@@ -1,6 +1,31 @@
 import "../Reservation/Reservation.css";
 
 function Reservation(params) {
+
+
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+
+        const nameRef = formData.get('name');
+        const priceRef = formData.get('price');
+        const descriptionRef = formData.get('description');
+        const imgRef = formData.get('img');
+
+
+
+        console.log(nameRef);
+
+
+
+        reserve(nameRef, priceRef, descriptionRef, peopleRef.current, imgRef);
+        navigate("/menu");
+    }
+
+
+
+
     return (
         <section id="mu-reservation">
             <div className="container">
@@ -18,11 +43,11 @@ function Reservation(params) {
 
                                 <div className="col-md-6">
                                     <div className="mu-reservation-left">
-                                        <form className="mu-reservation-form">
+                                        <form className="mu-reservation-form" onSubmit={handleSubmit}>
                                             <div className="row">
                                                 <div className="col-md-12">
                                                     <div className="form-group">
-                                                        <input type="text" className="form-control" placeholder="Full Name" />
+                                                        <input type="text" className="form-control" placeholder="Full Name" name="name" required/>
                                                     </div>
                                                 </div>
                                                 <div className="col-md-12">
@@ -37,7 +62,7 @@ function Reservation(params) {
                                                 </div>
                                                 <div className="col-md-12">
                                                     <div className="form-group">
-                                                        <select className="form-control">
+                                                        <select className="form-control" ref={peopleRef} onChange={e => { peopleRef.current = e.target.value }}>
                                                             <option value="0">How Many?</option>
                                                             <option value="1 Person">1 Person</option>
                                                             <option value="2 People">2 People</option>

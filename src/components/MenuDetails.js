@@ -83,7 +83,7 @@ function MenuDetails(props) {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="mu-reservation-area">
+                        <div className="mu-details-area">
                             <div className="mu-title">
                                 <span className="mu-subtitle">Menu</span>
                                 <h2>Details</h2>

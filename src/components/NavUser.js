@@ -49,7 +49,7 @@ function NavUser() {
                 <li><Link to="/menu">MENU</Link></li>
                 <li><Link to="/gallery">GALLERY</Link></li>
                 <li><Link to="/reservation">RESERVATION</Link></li>
-                <li><Link to="/cart">CART</Link></li>
+                {/* <li><Link to="/cart">CART</Link></li> */}
                 <li className='welcome'>WELCOME {currentUser.email} <button onClick={handleLogout}>Logout</button></li>
 
               

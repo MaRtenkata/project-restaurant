@@ -40,12 +40,12 @@ function NavAdmin() {
 
             </div>
             <div id="navbar" className="navbar-collapse collapse">
-              <ul id="top-menu" className="nav navbar-nav navbar-right mu-main-nav">
+              <ul id="top-menu" className="nav navbar-nav navba-right mu-main-nav">
                 <li><Link to="/">HOME</Link></li>
                 <li><Link to="/menu">MENU</Link></li>
                 <li><Link to="/gallery">GALLERY</Link></li>
                 <li><Link to="/add-item">ADD ITEM</Link></li>  
-                {/* <li><Link to="/add-img">ADD IMG</Link></li> */}
+                <li><Link to="/add-img">RESERVATIONS </Link></li> 
 
                 <li className='welcome'>WELCOME {currentUser.email} <button onClick={handleLogout}>Logout</button></li>
               </ul>

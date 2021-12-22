@@ -194,7 +194,7 @@ img {
 
 .mu-main-navbar .mu-main-nav {
   font-family: "Open Sans", sans-serif;
-  width: 65%;
+  width: 80%;
 }
 
 .mu-main-navbar .mu-main-nav li a {
@@ -259,6 +259,19 @@ img {
 
 .welcome {
  padding: 10px 0;
+}
+
+.mu-details-area{
+  display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    width: 100%;
+}
+
+.mu-details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
